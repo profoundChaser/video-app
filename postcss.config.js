@@ -15,8 +15,8 @@ module.exports = {
         'last 4 FirefoxAndroid versions',
         'last 4 iOS versions'
       ]
-    })
-
+    }),
+    require('tailwindcss')
     // https://github.com/elchininet/postcss-rtlcss
     // If you want to support RTL css, then
     // 1. yarn/npm install postcss-rtlcss
