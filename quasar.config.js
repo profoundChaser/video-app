@@ -86,7 +86,23 @@ module.exports = configure(function (/* ctx */) {
 
           // you need to set i18n resource including paths !
           include: path.resolve(__dirname, './src/i18n/**')
-        }]
+        }],
+        [
+          "unplugin-auto-import/vite",
+          {
+            resolvers: [
+              require("unplugin-vue-components/resolvers").ElementPlusResolver(),
+            ],
+          },
+        ],
+        [
+          "unplugin-vue-components/vite",
+          {
+            resolvers: [
+              require("unplugin-vue-components/resolvers").ElementPlusResolver(),
+            ],
+          },
+        ]
       ]
     },
 
