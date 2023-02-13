@@ -59,7 +59,14 @@ module.exports = configure(function (/* ctx */) {
         browser: [ 'es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1' ],
         node: 'node16'
       },
-
+      //去除console和debugger
+      minify:'terser',
+      terserOptions: {
+        compress:{
+          drop_console:true,
+          drop_debugger:true
+        }
+      },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
